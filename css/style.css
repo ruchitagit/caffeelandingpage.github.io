@@ -1,0 +1,141 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size:20px;
+    overflow-x: hidden;
+    color:white;
+    font-family: 'Flamenco', cursive;
+}
+header{
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('../images/bg1.png');
+    background-size: cover;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.row{
+   max-width: 1180px;
+   margin: 0 auto;
+}
+.clearfix:after{
+    content:".";
+    visibility: hidden;
+    display: block;
+    clear: both;
+}
+.logo{
+    height:120px;
+    width: auto;
+    float: left;
+    margin-top: 20px;
+}
+.main-nav{
+    margin-top: 60px;
+    float: right;
+}
+.main-nav li{
+    display: inline-block;
+    margin-left: 30px;
+    list-style:none;
+
+}
+.main-nav li a{
+    padding: 5px 0;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size:100%;
+    font-weight: 200;
+}
+.main-nav li a:hover{
+    border-bottom:1px solid #bf55ec ;
+}
+.main-content-header{
+    width: 1180px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+h1{
+    font-size:200%;
+    word-spacing: 3px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+
+}
+.btn{
+    margin-top: 20px;
+    display: inline-block;
+    padding:10px 30px;
+    font-weight: lighter;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 200px;
+    transition:background-color 0.2s, color 0.2s, border 0.2s;
+}
+.btn-full, .btn-more{
+    background-color:transparent;
+    color:#bf55ec;
+    border: 1px solid #bf55ec;
+    margin-left: 20px;
+}
+.btn-full:hover, .btn-more:hover{
+    background-color:white;
+}
+.mobile-icon{display:none;}
+.colorchange{
+    animation:colorchanger 1s infinite;
+}
+@keyframes colorchanger {
+    0%{color: red;}
+    25%{color:#bf55ec;}
+    50%{color: white;}
+    100%{color:#bf55ec}
+}
+@media only screen and (max-width: 1180px){
+    .main-content-header{
+        width: 100%;
+        padding:0 2%;
+    }
+}
+@media only screen and (max-width: 998px){
+    h1{   font-size:200%;
+        padding:8px;
+}
+.logo{padding-left: 15px;}
+}
+@media only screen and (max-width: 768px){
+    h1{   font-size:180%;}
+    .main-nav{display:none;}
+    .mobile-icon{
+        display:inline-block;
+        color:white;
+        font-size:30px;
+        position:absolute;
+        right:40px;
+        top:40px;
+    
+    }
+    .main-nav{
+        float:left;
+        margin-top: 20px;
+    }
+    .main-nav li{
+        display:block;
+        margin-top: 10px;
+    }
+}
+@media only screen and (max-width: 400px){
+    h1{font-size: 130%;
+        margin-top: 72px;}
+    .btn-full,.btn-more{
+        margin-left: 30px;
+        font-size: 18px;
+    }
+}
